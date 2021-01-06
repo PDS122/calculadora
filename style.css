@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body, .container{
+    height: 100%;
+    background-color: rgb(34, 30, 30);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora{
+    height: 500px;
+    width: 300px;
+    background-color: #333;
+    border-bottom-left-radius: 30px;
+    border-right: 15px solid rgb(37, 37, 37);
+}
+
+.tela{
+    background-color: black;
+    margin-top: 10px;
+    margin-left: 14px;
+    margin-right: 16px;
+    height: 20%;
+    width: 91%;
+}
+
+.display{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.anterior{
+    color: white;
+    filter: opacity(35%);
+    font-size: 20px;
+}
+.operador{
+    color: white;
+}
+
+.atual{
+    color: white;
+    font-size: 25px;
+}
+
+.botoes{
+    display: grid;
+    height: 60%;
+    width: 90%;
+    margin: 40px 16px 0px 14px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    border-bottom: 10px solid rgb(66, 66, 66);
+}
+
+.primeira, .segunda, .terceira, .quarta, .quinta{
+    display: flex;
+    width: 100%;
+}
+
+.segunda{
+    grid-row: 2;
+}
+.terceira{
+    grid-row: 3;
+}
+.quarta{
+    grid-row: 4;
+}
+.quinta{
+    grid-row: 5;
+}
+
+.botao, .botaooperador, .botaolimpar, .botaoigual{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    width: 25%;
+    background-color: white;
+    margin: 1px 2px 1px 2px;
+    border-right: 4px solid rgb(151, 151, 151);
+    transition: 0.2s;
+}
+
+.quinta > .botaoigual{
+    border-right: 4px solid #3553ad;
+    background-color: royalblue;
+    margin-top: 2px;
+    width: 100%;
+}
+
+.quarta > .botaolimpar:nth-child(4){
+    background-color: red;
+    border-right: 4px solid darkred;
+}
+
+.botao:hover, .botaooperador:hover, .botaolimpar:hover, .botaoigual:hover{
+    cursor: pointer;
+    filter: brightness(75%);
+}
